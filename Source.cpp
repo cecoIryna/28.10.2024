@@ -1,5 +1,9 @@
 #include <iostream>
+#include <string.h>
+#include <time.h>
+
 using namespace std;
+
 
 template <typename T>
 struct StackNode {
@@ -93,11 +97,14 @@ int main() {
     cout << "Stack after pushing elements: ";
     stack.print();
 
+    cout << "Size: " << stack.size() << endl;
+
     stack.pop();
     stack.pop();
 
     cout << "Stack after popping 2 elements: ";
     stack.print();
+    cout << "Size: " << stack.size() << endl;
 
     cout << "Head element: " << stack.peek() << endl;
 
@@ -105,6 +112,7 @@ int main() {
     cout << "Stack cleared.\n";
 
     cout << "Is stack empty? " << (stack.isEmpty() ? "Yes" : "No") << endl;
+    cout << "Size: " << stack.size() << endl;
 
     return 0;
 }
